@@ -10,17 +10,16 @@ spec:
   project: default
   
   source:
-    repoURL: https://kubernetes.github.io/ingress-nginx
+  - repoURL: https://kubernetes.github.io/ingress-nginx
     chart: ingress-nginx
     targetRevision: 4.13.2
-
-    repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
-    targetRevision: HEAD
-    ref: values
-
     helm:
       valueFiles:
-        - values/infrastructure/helm/ingr-nginx-ext-values.yaml
+        - $values/infrastructure/helm/ingr-nginx-ext-values.yaml
+
+  - repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
+    targetRevision: HEAD
+    ref: values
   
   destination:
     server: https://kubernetes.default.svc
