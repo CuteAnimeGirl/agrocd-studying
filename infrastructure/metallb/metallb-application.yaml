@@ -4,15 +4,15 @@ metadata:
   name: metallb
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 
 spec:
   project: default
 
   source:
-    repoURL: https://your-git-repo.com/your-repo
+    repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
     targetRevision: HEAD
-    path: metallb/
+    path: infrastructure/metallb/
 
   destination:
     server: https://kubernetes.default.svc

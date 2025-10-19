@@ -4,7 +4,7 @@ metadata:
   name: longhorn-helm
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "1"
 
 spec:
   project: default
@@ -13,9 +13,14 @@ spec:
     repoURL: https://charts.longhorn.io
     chart: longhorn
     targetRevision: 1.9.1
+
+    repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
+    targetRevision: HEAD
+    ref: values
+
     helm:
       valueFiles:
-        - longhorn-values.yaml
+        - values/infrastructure/helm/longhorn-values.yaml
   
   destination:
     server: https://kubernetes.default.svc
