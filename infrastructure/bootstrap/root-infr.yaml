@@ -1,19 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: root-infr
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+
 spec:
   project: default
+
   source:
-    repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
+  - repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
     targetRevision: HEAD
-    path: apps
+    path: infrastructure/bootstrap
+
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
+
   syncPolicy:
     automated:
       prune: true
