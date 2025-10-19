@@ -11,7 +11,7 @@ spec:
 
   source:
     repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
-    targetRevision: HEAD
+    targetRevision: master
     path: infrastructure/metallb/
 
   destination:

@@ -18,7 +18,7 @@ spec:
         - $values/infrastructure/helm/longhorn-values.yaml
 
   - repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
-    targetRevision: HEAD
+    targetRevision: master
     ref: values
   
   destination:
