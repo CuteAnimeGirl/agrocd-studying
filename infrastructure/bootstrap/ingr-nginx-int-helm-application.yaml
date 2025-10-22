@@ -17,7 +17,7 @@ spec:
       valueFiles:
         - $values/infrastructure/helm/ingr-nginx-int-values.yaml
 
-  - repoURL: https://github.com/CuteAnimeGirl/study-k8s-agrocd.git
+  - repoURL: https://github.com/CuteAnimeGirl/agrocd-studying.git
     targetRevision: master
     ref: values
   
