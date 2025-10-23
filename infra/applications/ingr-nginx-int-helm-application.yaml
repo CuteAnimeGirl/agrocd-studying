@@ -15,8 +15,7 @@ spec:
     targetRevision: 4.13.2
     helm:
       valueFiles:
-        - https://raw.githubusercontent.com/CuteAnimeGirl/agrocd-studying/master/infra/helm/ingr-nginx-int-values.yaml
-
+        - $values/infra/helm/ingr-nginx-int-values.yaml
   - repoURL: https://github.com/CuteAnimeGirl/agrocd-studying.git
     targetRevision: master
     ref: values
