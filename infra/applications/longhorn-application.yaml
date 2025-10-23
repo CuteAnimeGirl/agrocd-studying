@@ -10,7 +10,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/CuteAnimeGirl/agrocd-studying.git
+    repoURL: 'https://github.com/CuteAnimeGirl/agrocd-studying.git'
     targetRevision: master
     path: infra/longhorn/
 
