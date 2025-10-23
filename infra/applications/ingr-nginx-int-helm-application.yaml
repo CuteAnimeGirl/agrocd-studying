@@ -19,7 +19,7 @@ spec:
       valueFiles:
       - $values/infra/helm/ingr-nginx-int-values.yaml
 
-  - repoURL: 'https://github.com/CuteAnimeGirl/agrocd-studying.git'
+  - repoURL: 'https://github.com/CuteAnimeGirl/argocd-studying.git'
     targetRevision: master
     ref: values
   
