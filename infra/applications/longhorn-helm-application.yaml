@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   
-  source:
+  sources:
   - repoURL: 'https://charts.longhorn.io'
     chart: longhorn
     targetRevision: 1.9.1
