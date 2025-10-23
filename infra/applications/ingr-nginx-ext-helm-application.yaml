@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: longhorn-helm
+  name: ingress-nginx-external-helm
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "10"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 
 spec:
   project: default
   
   source:
-  - repoURL: https://charts.longhorn.io
-    chart: longhorn
-    targetRevision: 1.9.1
+  - repoURL: https://kubernetes.github.io/ingress-nginx
+    chart: ingress-nginx
+    targetRevision: 4.13.2
     helm:
       valueFiles:
-        - $values/infrastructure/helm/longhorn-values.yaml
+        - $values/infra/helm/ingr-nginx-ext-values.yaml
 
   - repoURL: https://github.com/CuteAnimeGirl/agrocd-studying.git
     targetRevision: master
@@ -23,7 +23,7 @@ spec:
   
   destination:
     server: https://kubernetes.default.svc
-    namespace: longhorn-system
+    namespace: ingress-nginx-external
   
   syncPolicy:
     automated:
