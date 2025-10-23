@@ -4,9 +4,7 @@ metadata:
   name: longhorn-conf
   namespace: argocd
   finalizers:
-    - finalizer.argocd.argoproj.io/resources
-  annotations:
-    argocd.argoproj.io/sync-wave: "-5"
+    - resources-finalizer.argocd.argoproj.io
 
 spec:
   project: default

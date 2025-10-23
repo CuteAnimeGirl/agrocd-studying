@@ -4,9 +4,7 @@ metadata:
   name: longhorn-helm
   namespace: argocd
   finalizers:
-    - finalizer.argocd.argoproj.io/resources
-  annotations:
-    argocd.argoproj.io/sync-wave: "-10"
+    - resources-finalizer.argocd.argoproj.io
 
 spec:
   project: default
