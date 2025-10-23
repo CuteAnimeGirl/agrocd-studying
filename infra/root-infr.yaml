@@ -4,7 +4,9 @@ metadata:
   name: root-infr
   namespace: argocd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+    - finalizer.argocd.argoproj.io/resources
+  annotations:
+    argocd.argoproj.io/sync-wave: "-100"
 
 spec:
   project: default
