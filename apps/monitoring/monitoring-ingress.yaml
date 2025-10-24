@@ -4,7 +4,7 @@ metadata:
   name: prometheus-ingress
   namespace: monitoring
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-internal
   rules:
   - host: prometheus.lan
     http:
@@ -24,7 +24,7 @@ metadata:
   name: grafana-ingress
   namespace: monitoring
 spec:
-  ingressClassName: nginx
+  ingressClassName: nginx-internal
   rules:
   - host: grafana.lan
     http:
