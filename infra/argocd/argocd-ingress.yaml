@@ -4,8 +4,9 @@ metadata:
   name: argocd-internal
   namespace: argocd
   annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx-internal
   rules:
@@ -18,4 +19,4 @@ spec:
           service:
             name: argocd-server
             port:
-              name: https
+              number: 80
