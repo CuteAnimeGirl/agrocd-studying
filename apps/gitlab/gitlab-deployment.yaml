@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: gitlab
-        image: gitlab/gitlab-ce:18.4.0-ce.0
+        image: gitlab/gitlab-ce:18.5.1-ce.0
         ports:
         - containerPort: 80
         - containerPort: 443
