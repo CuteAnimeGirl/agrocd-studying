@@ -53,22 +53,3 @@ metadata:
           "tags": ["hdd", "data1"]
         }
       ]
-
----
-apiVersion: v1
-kind: Node
-metadata:
-  name: k8s-worker4.lan
-  labels:
-    data: "true"
-    node.longhorn.io/create-default-disk: "config"
-  annotations:
-    node.longhorn.io/default-disks-config: |
-      [
-        {
-          "path": "/mnt/data1",
-          "allowScheduling": true,
-          "storageReserved": 17179869184,
-          "tags": ["hdd", "data1"]
-        }
-      ]
