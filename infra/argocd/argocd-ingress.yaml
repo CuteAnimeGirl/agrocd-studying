@@ -5,12 +5,11 @@ metadata:
   namespace: argocd
   annotations:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   ingressClassName: nginx-internal
   rules:
-  - host: argocd.k8s.lan
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
@@ -18,4 +17,9 @@ spec:
           service:
             name: argocd-server
             port:
-              name: https
+              name: http
+    host: argocd.k8s.lan
+  tls:
+  - hosts:
+    - argocd.k8s.lan
+    secretName: argocd-initial-admin-secret
