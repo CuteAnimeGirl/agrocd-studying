@@ -4,5 +4,3 @@ metadata:
   name: gitlab
   labels:
     name: gitlab
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"

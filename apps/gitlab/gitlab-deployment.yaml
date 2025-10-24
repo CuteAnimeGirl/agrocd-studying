@@ -12,8 +12,6 @@ spec:
     metadata:
       labels:
         app: gitlab
-    annotations:
-      argocd.argoproj.io/sync-wave: "2"
 
     spec:
       containers:
