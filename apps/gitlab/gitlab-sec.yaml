@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: gitlab-secrets
+  namespace: gitlab
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+
+type: Opaque
+stringData:
+  GITLAB_ROOT_PASSWORD: "test-password-5454!"
