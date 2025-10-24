@@ -11,7 +11,7 @@ prometheus:
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
-              storage: 4Gi
+              storage: 1Gi
 
 kube-state-metrics:
   enabled: true
@@ -21,7 +21,7 @@ grafana:
     enabled: true
     storageClassName: longhorn-sc1
     accessModes: ["ReadWriteOnce"]
-    size: 4Gi
+    size: 1Gi
 
 alertmanager:
   alertmanagerSpec:
@@ -32,4 +32,4 @@ alertmanager:
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
-              storage: 4Gi
+              storage: 1Gi
