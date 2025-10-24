@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx-internal
   rules:
-  - host: gitlab.k8s-ingress1.lan
+  - host: gitlab.k8s.lan
     http:
       paths:
       - path: /

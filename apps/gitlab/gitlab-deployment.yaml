@@ -26,7 +26,7 @@ spec:
         env:
         - name: GITLAB_OMNIBUS_CONFIG
           value: |
-            external_url 'http://gitlab.k8s-ingress1.lan'
+            external_url 'http://gitlab.k8s.lan'
             gitlab_rails['gitlab_shell_ssh_port'] = 22
             nginx['listen_port'] = 80
             nginx['listen_https'] = false
