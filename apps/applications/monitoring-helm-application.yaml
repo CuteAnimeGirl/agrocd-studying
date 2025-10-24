@@ -15,7 +15,6 @@ spec:
     targetRevision: 77.11.0
     helm:
       valueFiles:
-      - $values/apps/helm/monitoring-values-sec.yaml
       - $values/apps/helm/monitoring-values.yaml
 
   - repoURL: 'https://github.com/CuteAnimeGirl/argocd-studying.git'
