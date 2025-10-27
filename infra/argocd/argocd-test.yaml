@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx-external
   rules:
-  - host: argocd.k8s.lan
+  - host: argocd2.k8s.lan
     http:
       paths:
       - path: /
