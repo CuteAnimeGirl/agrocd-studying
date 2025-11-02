@@ -8,7 +8,7 @@ spec:
   project: default
   
   source:
-    repoURL: 'https://github.com/CuteAnimeGirl/argocd-studying.git'
+    repoURL: 'https://github.com/LexNinvor/argocd-studying.git'
     targetRevision: master
     path: apps/nginx
     
